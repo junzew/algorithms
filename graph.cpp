@@ -16,7 +16,7 @@ void bfs(int s) {
 	q.push(s);
 	while(!q.empty()) {
 		int u = q.front(); q.pop();
-		cout << u << " d = " <<d[u] << endl;
+		cout << u << " d = " << d[u] << endl;
 		for (int i = 0; i < AdjList[u].size(); i++) {
 			int v = AdjList[u][i];
 			if (d[v] == INF) {
@@ -29,7 +29,7 @@ void bfs(int s) {
 
 vector<int> Explored; // Explored nodes
 void dfs(int u) {
-	cout << u << endl;
+	cout << u << " ";
 	Explored[u] = VISITED; // Mark u as VISITED
 	for (int i = 0; i < AdjList[u].size(); i++) {// For each connected node v
 		int v = AdjList[u][i];
@@ -53,6 +53,8 @@ The following c numbers are the indicies of connected nodes.
  \  /
   0
 
+7--8--9
+
 Sample Input:
 7 3
 2 1 2
@@ -62,6 +64,19 @@ Sample Input:
 3 2 3 5
 2 4 6
 0
+
+
+10 3
+2 1 2
+3 0 2 3
+3 0 1 4
+2 1 4
+3 2 3 5
+2 4 6
+0
+1 8
+2 7 9
+1 8
 */
 int main() {
 	int n, s;
@@ -80,9 +95,18 @@ int main() {
 		}
 		AdjList.push_back(l);
 	}
-	cout << "DFS:" << endl;
+	cout << "DFS:";
 	dfs(s);
+	cout << endl;
+
 	cout << "BFS:" << endl;
 	bfs(s);
+
+	cout << "All Connected Components: " << endl;
+	int numCC = 0; // number of connected components
+	Explored.assign(n, UNVISITED); // sets all vertices’ state to UNVISITED
+	for (int i = 0; i < n; i++) // for each vertex i in [0..V-1]
+		if (Explored[i] == UNVISITED) // if vertex i is not visited yet
+		printf("CC %d: ", ++numCC), dfs(i), printf("\n");
 	return 0;
 }
