@@ -56,16 +56,6 @@ The following c numbers are the indicies of connected nodes.
 7--8--9
 
 Sample Input:
-7 3
-2 1 2
-3 0 2 3
-3 0 1 4
-2 1 4
-3 2 3 5
-2 4 6
-0
-
-
 10 3
 2 1 2
 3 0 2 3
