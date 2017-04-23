@@ -6,5 +6,10 @@ Implementation of algorithms from CPSC320 and the book [*Algorithm Design*](http
   * BFS
   * DFS
   * Connected Components
-3. Interval Scheduling
-4. Weighted Interval Scheduling
+3. Greedy
+  * Interval Scheduling
+4. Divide and Conquer
+  * Quicksort
+  * Quickselect
+5. Dynamic Programming
+  * Weighted Interval Scheduling
