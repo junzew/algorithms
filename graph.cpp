@@ -9,8 +9,15 @@ using namespace std;
 
 vector<vector<int>> AdjList; // Adjacency List
 
+int p[1024]; // parent
+void printPath(int u, int s) {
+	if (u == s) { printf("%d", s); return; } // base case, at the source s
+	printPath(p[u], s); // recursive: to make the output format: s -> ... -> t
+	printf(" -> %d", u);
+}
 vector<int> d; // distance to source s
 queue<int> q;
+
 void bfs(int s) {
 	d[s] = 0;
 	q.push(s);
@@ -21,6 +28,7 @@ void bfs(int s) {
 			int v = AdjList[u][i];
 			if (d[v] == INF) {
 				d[v] = d[u] + 1;
+				p[v] = u;
 				q.push(v);
 			}
 		}
@@ -91,7 +99,8 @@ int main() {
 
 	cout << "BFS:" << endl;
 	bfs(s);
-
+	printPath(6, s);
+	cout << endl;
 	cout << "All Connected Components: " << endl;
 	int numCC = 0; // number of connected components
 	Explored.assign(n, UNVISITED); // sets all vertices’ state to UNVISITED
