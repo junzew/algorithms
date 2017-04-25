@@ -15,3 +15,4 @@ Implementation of algorithms from [CPSC320](http://blogs.ubc.ca/cpsc3202016w2/sy
 5. Dynamic Programming
   * Weighted Interval Scheduling
   * Longest Common Subsequence
+  * Fibonacci number
