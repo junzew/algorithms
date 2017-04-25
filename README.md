@@ -16,3 +16,4 @@ Implementation of algorithms from [CPSC320](http://blogs.ubc.ca/cpsc3202016w2/sy
   * Weighted Interval Scheduling
   * Longest Common Subsequence
   * Fibonacci number
+  * Knapsack
