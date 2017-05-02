@@ -10,6 +10,7 @@ Implementation of algorithms from [CPSC320](http://blogs.ubc.ca/cpsc3202016w2/sy
   * Interval Scheduling
   * Coin Change
 4. Divide and Conquer
+  * Mergesort
   * Quicksort
   * Quickselect
 5. Dynamic Programming
