@@ -1,5 +1,11 @@
 # algorithms
-Implementation of algorithms from [CPSC320](http://blogs.ubc.ca/cpsc3202016w2/syllabus/#intro) and the book [*Algorithm Design*](http://www.cs.princeton.edu/~wayne/kleinberg-tardos/)
+Implementation of algorithms and data structures
+
+[CPSC320](http://blogs.ubc.ca/cpsc3202016w2/syllabus/#intro)
+
+[*Algorithm Design*](http://www.cs.princeton.edu/~wayne/kleinberg-tardos/)
+
+[*Algorithms*](http://algs4.cs.princeton.edu/home/)
 
 1. Gale-Shapley and Stable Matching
 2. Graph
@@ -18,3 +24,4 @@ Implementation of algorithms from [CPSC320](http://blogs.ubc.ca/cpsc3202016w2/sy
   * Longest Common Subsequence
   * Fibonacci number
   * Knapsack
+6. Union-Find
