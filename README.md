@@ -25,3 +25,4 @@ Implementation of algorithms and data structures
   * Fibonacci number
   * Knapsack
 6. Union-Find
+7. Sieve of Eratosthenes
