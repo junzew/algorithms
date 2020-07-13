@@ -26,3 +26,4 @@ Implementation of algorithms and data structures
   * Knapsack
 6. Union-Find
 7. Sieve of Eratosthenes
+8. Heapsort
