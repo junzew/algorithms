@@ -28,3 +28,4 @@ Implementation of algorithms and data structures
 7. Sieve of Eratosthenes
 8. Heapsort
 9. Insertion sort
+10. Selection sort
