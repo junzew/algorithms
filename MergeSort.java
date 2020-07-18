@@ -4,23 +4,24 @@ class MergeSort {
         int n1 = mid - lo + 1;
         int n2 = hi - mid;
         // create temp arrays
-        int L[] = new int[n1];
-        int R[] = new int[n2];
-
+        int L[] = new int[n1+1];
+        int R[] = new int[n2+1];
         // copy data to L and R
         for (int i = 0; i < n1; i++) {
             L[i] = A[lo + i];
         }
         for (int j = 0; j < n2; j++) {
-            R[j] = A[mid + j];
+            R[j] = A[mid + j + 1];
         }
+        L[n1] = Integer.MAX_VALUE;
+        R[n2] = Integer.MAX_VALUE;
 
-        for (int i = 0, j = 0, k = lo; k < hi; k++) {
+        for (int i = 0, j = 0, k = lo; k <= hi; k++) {
             if (L[i] <= R[j]) {
                 A[k] = L[i];
                 i++;
             } else {
-                A[k] = R[i];
+                A[k] = R[j];
                 j++;
             }
         }
@@ -37,10 +38,11 @@ class MergeSort {
         msort(A, 0, A.length - 1);
     }
     public static void main(String[] args) {
-        int A[] = new int[] { 3,6,9,4,5,7,2,8,1 };
-        QuickSort.sort(A);
+        int A[] = new int[] { 3,6,0,9,4,5,7,2,8,1 };
+        MergeSort.sort(A);
         for (int a : A) {
             System.out.println(a);
         }
+
     }
 }
